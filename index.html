@@ -2,36 +2,61 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <!-- スマホ対応（画面サイズに合わせて自動調整する設定） -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cogie0806検索</title>
+
+    <!-- 地球アイコンをご指定の画像に変更する設定 -->
+    <link rel="icon" href="cogie0806.jpg" type="image/jpeg">
+    <link rel="apple-touch-icon" href="cogie0806.jpg">
+
     <style>
         body {
             font-family: "Hiragino Kaku Gothic ProN", "Helvetica Neue", sans-serif;
             background-color: #f5f8fa;
             margin: 0;
-            padding: 40px 20px;
+            padding: 20px 10px; /* スマホ用に余白を少し狭く調整 */
             display: flex;
             flex-direction: column;
             align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
         }
         .search-container {
             width: 100%;
             max-width: 650px;
             background: #ffffff;
-            padding: 30px;
+            padding: 20px; /* スマホ用に内側の余白を調整 */
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.08);
             text-align: center;
+            box-sizing: border-box;
+            margin-top: 20px;
         }
         h1 {
-            color: #0066cc; /* 文字の色を赤からきれいな青色に変更しました */
-            font-size: 32px;
-            margin-bottom: 25px;
+            color: #0066cc;
+            font-size: 28px; /* スマホで見やすい文字サイズに調整 */
+            margin-bottom: 20px;
             font-weight: bold;
             letter-spacing: -1px;
         }
         .gcse-search {
             margin-top: 15px;
+            width: 100%;
+        }
+
+        /* パソコンなどの大画面用の調整 */
+        @media (min-width: 600px) {
+            body {
+                padding: 40px 20px;
+            }
+            .search-container {
+                padding: 30px;
+                margin-top: 40px;
+            }
+            h1 {
+                font-size: 32px;
+            }
         }
     </style>
 </head>
@@ -41,7 +66,7 @@
         <h1>cogie0806検索</h1>
         
         <!-- あなたの検索エンジンIDが反映されたコード -->
-        <script async src="https://cse.google.com/cse.js?cx=44abfe0ae36cb4d7a"></script>
+        <script async src="https://google.com"></script>
         <div class="gcse-search"></div>
     </div>
 
